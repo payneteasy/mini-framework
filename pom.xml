@@ -29,9 +29,9 @@
     </properties>
 
     <scm>
-        <connection>scm:git:git@github.com:evsinev/mini-framework.git</connection>
-        <developerConnection>scm:git:git@github.com:evsinev/mini-framework.git</developerConnection>
-        <url>https://github.com/evsinev/mini-framework.git</url>
+        <connection>scm:git:git@github.com:payneteasy/mini-framework.git</connection>
+        <developerConnection>scm:git:git@github.com:payneteasy/mini-framework.git</developerConnection>
+        <url>https://github.com/evsinev/payneteasy-framework.git</url>
         <tag>HEAD</tag>
   </scm>
 
