@@ -35,6 +35,14 @@
         <tag>HEAD</tag>
   </scm>
 
+    <repositories>
+        <repository>
+            <id>pne</id>
+            <name>payneteasy repo</name>
+            <url>https://maven.pne.io</url>
+        </repository>
+    </repositories>
+
     <distributionManagement>
 
         <repository>
@@ -148,6 +156,7 @@
                 <artifactId>slf4j-api</artifactId>
                 <version>${slf4j.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>jcl-over-slf4j</artifactId>
