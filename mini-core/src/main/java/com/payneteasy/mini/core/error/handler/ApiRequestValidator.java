@@ -24,7 +24,7 @@ public class ApiRequestValidator implements IRequestValidator {
     }
 
     @Override
-    public <T> T validateRequest(T aRequest) {
+    public <T> T validateRequest(T aRequest, Class<T> aRequestClass) {
         if(aRequest == null) {
             throw new ApiBadRequestErrorException(BadRequestError.builder()
                     .errorCorrelationId(UUID.randomUUID().toString())
