@@ -60,7 +60,7 @@ public class DaoFactoryBuilder {
     private static HikariConfig createHikariConfig(DaoDatabaseConfig aConfig) {
         HikariConfig poolConfig = new HikariConfig();
         poolConfig.setAutoCommit(true);
-        poolConfig.setConnectionTestQuery(aConfig.getConnectionInitQuery());
+        poolConfig.setConnectionInitSql(aConfig.getConnectionInitQuery());
         poolConfig.setJdbcUrl(aConfig.getJdbcUrl());
         poolConfig.setUsername(aConfig.getUsername());
         poolConfig.setPassword(aConfig.getPassword());
