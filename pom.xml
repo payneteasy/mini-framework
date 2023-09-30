@@ -195,7 +195,7 @@
             <dependency>
                 <groupId>com.payneteasy</groupId>
                 <artifactId>jetty-util</artifactId>
-                <version>1.0-8</version>
+                <version>1.0-14</version>
             </dependency>
 
             <dependency>
