@@ -5,6 +5,7 @@ import com.googlecode.jdbcproc.daofactory.IMetaLoginInfoService;
 import com.googlecode.jdbcproc.daofactory.StoredProcedureDaoFactoryBean;
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
+import com.zaxxer.hikari.metrics.prometheus.PrometheusHistogramMetricsTrackerFactory;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.jdbc.core.JdbcTemplate;
 
@@ -64,6 +65,7 @@ public class DaoFactoryBuilder {
         poolConfig.setJdbcUrl(aConfig.getJdbcUrl());
         poolConfig.setUsername(aConfig.getUsername());
         poolConfig.setPassword(aConfig.getPassword());
+        poolConfig.setMetricsTrackerFactory(new PrometheusHistogramMetricsTrackerFactory());
         return poolConfig;
     }
 
