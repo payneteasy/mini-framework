@@ -23,7 +23,7 @@ Features:
 <dependency>
     <groupId>com.payneteasy.mini-framework</groupId>
     <artifactId>mini-dao</artifactId>
-    <version>1.0-1</version>
+    <version>2.0-2</version>
 </dependency>
 ```
 
