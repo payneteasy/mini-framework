@@ -16,10 +16,11 @@
         <java.version>21</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-        <logback.version> 1.5.18 </logback.version>
+        <logback.version> 1.5.32 </logback.version>
         <slf4j.version>   2.0.17 </slf4j.version>
 
-        <jetty.version> 12.0.20</jetty.version>
+        <jetty.version>12.0.33</jetty.version>
+        <spring.version>5.3.39</spring.version>
 
     </properties>
 
@@ -119,7 +120,7 @@
             <dependency>
                 <groupId>com.googlecode.jdbc-proc.jdbc-proc</groupId>
                 <artifactId>jdbc-proc-daofactory-ee8</artifactId>
-                <version>2.0-5</version>
+                <version>2.0-6</version>
             </dependency>
 
             <dependency>
@@ -183,13 +184,13 @@
             <dependency>
                 <groupId>com.payneteasy</groupId>
                 <artifactId>jetty-util</artifactId>
-                <version>2.0-1</version>
+                <version>2.0-2</version>
             </dependency>
 
             <dependency>
                 <groupId>org.hibernate.validator</groupId>
                 <artifactId>hibernate-validator</artifactId>
-                <version>7.0.4.Final</version>
+                <version>7.0.5.Final</version>
             </dependency>
 
             <dependency>
@@ -202,6 +203,90 @@
                 <groupId>com.payneteasy</groupId>
                 <artifactId>api-servlet</artifactId>
                 <version>2.0-1</version>
+            </dependency>
+
+            <!-- Jetty overrides to fix CVE-2025-5115, CVE-2026-1605, CVE-2025-11143 -->
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-server</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-io</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-http</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-util</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-security</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-session</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty.ee8</groupId>
+                <artifactId>jetty-ee8-nested</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty.ee8</groupId>
+                <artifactId>jetty-ee8-servlet</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty.ee8</groupId>
+                <artifactId>jetty-ee8-security</artifactId>
+                <version>${jetty.version}</version>
+            </dependency>
+
+            <!-- Spring overrides to fix CVEs in transitive dependency from jdbc-proc -->
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-core</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-beans</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-jdbc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-tx</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-aop</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-context</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-expression</artifactId>
+                <version>${spring.version}</version>
             </dependency>
 
         </dependencies>
